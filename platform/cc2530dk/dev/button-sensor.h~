@@ -76,7 +76,7 @@ extern const struct sensors_sensor button_2_sensor;
 #if MODEL_CC2531
 /* USB Dongle */
 /* Buttons: P1_2 & P1_3 - Port 1 ISR needed */
-
+sdfsd
 void port_1_isr(void) __interrupt(P1INT_VECTOR);
 #define   BUTTON_SENSOR_ACTIVATE() do { \
     button_1_sensor.configure(SENSORS_ACTIVE, 1); \

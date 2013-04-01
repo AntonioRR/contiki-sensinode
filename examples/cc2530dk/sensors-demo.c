@@ -79,7 +79,7 @@
 PROCESS(sensors_test_process, "Sensor Test Process");
 #if BUTTON_SENSOR_ON
 PROCESS(buttons_test_process, "Button Test Process");
-AUTOSTART_PROCESSES(&sensors_test_process, &buttons_test_process);
+AUTOSTART_PROCESSES(/*&sensors_test_process,*/ &buttons_test_process);
 #else
 AUTOSTART_PROCESSES(&sensors_test_process);
 #endif
@@ -99,7 +99,7 @@ PROCESS_THREAD(buttons_test_process, ev, data)
     sensor = (struct sensors_sensor *)data;
     if(sensor == &button_sensor) {
       PRINTF("Button Press\n");
-      leds_toggle(LEDS_GREEN);
+    // leds_toggle(LEDS_GREEN);
     }
   }
 
